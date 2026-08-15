@@ -1,1 +1,1 @@
-worker: python nuvia_bigin_sync.py
+worker: python test_endpoints.py
