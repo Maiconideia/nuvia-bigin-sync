@@ -26,7 +26,9 @@ class Config:
     """Carrega configuração de variáveis de ambiente ou arquivo .env"""
     NUVIA_API_KEY = os.getenv('NUVIA_API_KEY', '')
     NUVIA_ORG_ID = os.getenv('NUVIA_ORG_ID', '')
-    NUVIA_BASE_URL = os.getenv('NUVIA_BASE_URL', 'https://api.nuvia.ai/v1')
+    NUVIA_BASE_URL = os.getenv('NUVIA_BASE_URL', 'https://api.nuvia.ai/v1').rstrip('/')
+    if NUVIA_BASE_URL == 'https://api.nuvia.ai':
+        NUVIA_BASE_URL = 'https://api.nuvia.ai/v1'
     BIGIN_API_KEY = os.getenv('BIGIN_API_KEY', '')
     BIGIN_SUBDOMAIN = os.getenv('BIGIN_SUBDOMAIN', 'youraccount')
     BIGIN_BASE_URL = f'https://www.zohoapis.com/bigin/v2'
@@ -335,3 +337,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
