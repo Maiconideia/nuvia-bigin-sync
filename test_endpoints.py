@@ -17,7 +17,7 @@ NUVIA_BASE_URL = os.getenv('NUVIA_BASE_URL', 'https://api.nuvia.ai')
 
 # Headers com autenticação
 headers = {
-    'Authorization': f'Bearer {NUVIA_API_KEY}',
+    'X-API-Key': NUVIA_API_KEY,
     'Content-Type': 'application/json'
 }
 

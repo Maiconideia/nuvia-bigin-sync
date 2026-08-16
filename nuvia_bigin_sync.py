@@ -118,9 +118,7 @@ class NuviaAPI:
     def __init__(self):
         self.base_url = Config.NUVIA_BASE_URL
         self.headers = {
-            'Authorization': f'Bearer {Config.NUVIA_API_KEY}',
             'X-API-Key': Config.NUVIA_API_KEY,
-            'x-api-key': Config.NUVIA_API_KEY,
             'Content-Type': 'application/json',
         }
 
